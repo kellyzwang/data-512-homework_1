@@ -61,6 +61,32 @@ Users of this datasets need to credit the original source and follow the license
 
 All 3 datasets are saved as JSON files ordered using article titles as a key for the resulting time series data for that article. The ‘access’ field is removed for mobile and cumulative files as it is misleading.
 
+Schema:
+
+Main key is the article title (e.g. Klinefelter syndrome). The value associated with the key is an array of properties:
+- *project*: The platform or source of the data. In this case, all records are from "en.wikipedia," indicating that the data is from the English Wikipedia.
+- *article*: The article title.
+- *granularity*: The time granularity of the data.
+- *timestamp*: The exact time for which the view data is recorded in "YYYYMMDDHH" format.
+- *agent*: The type of user or agent who accessed the article.
+- *views*: The total number of views the article received during the specified time frame.
+
+Snippet of the JSON data as an example:
+```
+{
+    "Klinefelter syndrome": [
+        {
+            "project": "en.wikipedia",
+            "article": "Klinefelter_syndrome",
+            "granularity": "monthly",
+            "timestamp": "2015070100",
+            "agent": "user",
+            "views": 75311
+        },...
+    ]
+}
+```
+
 
 ### To Reproduce the Analysis
 
