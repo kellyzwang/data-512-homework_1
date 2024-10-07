@@ -102,3 +102,5 @@ Snippet of the JSON data as an example:
 ### Data Issues
 
 - Not all articles have data available for all months. For example, the article "2006 in Africa" has data for 111 months, while the article "2009 Swine Flu Pandemic Vaccine" contains data for only 54 months.
+
+- Retrieving data from the API takes around 15 minutes for each JSON file.
